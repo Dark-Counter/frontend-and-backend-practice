@@ -289,6 +289,14 @@ body {
     font-weight: 600; /* Жирный шрифт */
 }
 
+.goods-description {
+    font-size: 14px; /* Размер шрифта описания */
+    color: #7f8c8d; /* Серый цвет текста */
+    line-height: 1.5; /* Межстрочный интервал */
+    margin: 10px 0; /* Вертикальные отступы */
+    min-height: 60px; /* Минимальная высота для выравнивания */
+}
+
 .goods-price {
     font-size: 24px; /* Размер шрифта цены */
     color: #667eea; /* Синий цвет цены */
@@ -360,6 +368,63 @@ body {
     margin-top: 50px; /* Отступ сверху */
 }
 
+/* ===== ЭМОДЗИ И ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ===== */
+.news-title, .goods-title, .contact-label {
+    display: flex; /* Горизонтальное расположение эмодзи и текста */
+    align-items: center; /* Выравнивание по центру */
+    gap: 8px; /* Расстояние между эмодзи и текстом */
+}
+
+.news-title::before, .goods-title::before, .contact-label::before {
+    font-size: 1.2em; /* Размер эмодзи */
+    line-height: 1; /* Убираем лишний интервал */
+}
+
+/* Специальные стили для разных типов контента */
+.news-item:nth-child(1) {
+    border-left-color: #e74c3c; /* Красная полоса для первой новости */
+}
+
+.news-item:nth-child(2) {
+    border-left-color: #f39c12; /* Оранжевая полоса для второй новости */
+}
+
+.news-item:nth-child(3) {
+    border-left-color: #27ae60; /* Зеленая полоса для третьей новости */
+}
+
+.goods-item:nth-child(1) {
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.2); /* Красная тень */
+}
+
+.goods-item:nth-child(2) {
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2); /* Синяя тень */
+}
+
+.goods-item:nth-child(3) {
+    box-shadow: 0 8px 25px rgba(155, 89, 182, 0.2); /* Фиолетовая тень */
+}
+
+.contact-item:nth-child(1) {
+    border-left-color: #e74c3c; /* Красная полоса */
+}
+
+.contact-item:nth-child(2) {
+    border-left-color: #f39c12; /* Оранжевая полоса */
+}
+
+.contact-item:nth-child(3) {
+    border-left-color: #27ae60; /* Зеленая полоса */
+}
+
+.contact-item:nth-child(4) {
+    border-left-color: #3498db; /* Синяя полоса */
+}
+
+.contact-item:nth-child(5) {
+    border-left-color: #9b59b6; /* Фиолетовая полоса */
+}
+
 /* ===== АДАПТИВНОСТЬ ===== */
 @media (max-width: 768px) {
     .nav-list {
@@ -378,5 +443,9 @@ body {
     .news-meta {
         flex-direction: column; /* Вертикальное расположение мета-информации */
         gap: 10px; /* Уменьшенное расстояние */
+    }
+    
+    .goods-description {
+        min-height: auto; /* Убираем фиксированную высоту на мобильных */
     }
 }
