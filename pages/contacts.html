@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - Семестровая работа</title>
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div id="header">Хэдер</div>
+    <div class="page-container">
+    <div class="header">Хэдер</div>
     
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Практики</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+    <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
         </ul>
     </div>
     
-    <div id="content">
-        <h1>Контакты</h1>
+    <div class="content">
+        <h1 class="page-title">Контакты</h1>
         
         <div class="contacts-info">
             <div class="contact-item">
-                <h3>Адрес электронной почты:</h3>
-                <p>kuzkin.timofey@example.com</p>
+                <h3 class="contact-label">Адрес электронной почты:</h3>
+                <p class="contact-value">kuzkin.timofey@example.com</p>
             </div>
             
             <div class="contact-item">
-                <h3>Адрес:</h3>
-                <p>г. Москва, ул. Примерная, д. 123, офис 456</p>
+                <h3 class="contact-label">Адрес:</h3>
+                <p class="contact-value">г. Москва, ул. Примерная, д. 123, офис 456</p>
             </div>
             
             <div class="contact-item">
@@ -38,7 +40,8 @@
         </div>
     </div>
     
-    <div id="footer">Футер</div>
+    <div class="footer">Футер</div>
+    </div>
     
     <script>
         function callMe() {
