@@ -65,7 +65,7 @@
                     </article>
                     
                     <article class="contact-item">
-                        <button onclick="contactModal.showModal()" class="button button--primary button--large">
+                        <button onclick="openContactModal()" class="button button--primary button--large">
                             🏎️ Присоединиться к семье!
                         </button>
                     </article>
@@ -156,6 +156,12 @@
                 themeIcon.textContent = '🌙';
                 themeText.textContent = 'Темная тема';
             }
+        }
+
+        // Открытие модального окна
+        function openContactModal() {
+            const modal = document.getElementById('contactModal');
+            modal.showModal();
         }
 
         // Функция для отправки формы

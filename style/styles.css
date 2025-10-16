@@ -152,6 +152,8 @@ body {
   background: var(--color-bg-primary);
   min-height: 100vh;
   box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== БЛОК HEADER ===== */
@@ -214,6 +216,7 @@ body {
   padding: var(--spacing-xl);
   max-width: 900px;
   margin: 0 auto;
+  flex: 1;
 }
 
 /* ===== БЛОК PROFILE ===== */
@@ -792,7 +795,7 @@ body {
   color: var(--color-text-white);
   text-align: center;
   padding: var(--spacing-xl);
-  margin-top: var(--spacing-xxl);
+  margin-top: auto;
 }
 
 .footer__text {
