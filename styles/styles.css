@@ -1,5 +1,14 @@
 /* ===== ОСНОВНЫЕ СТИЛИ ПОРТФОЛИО ===== */
 
+/* Убираем лишние отступы у main и footer */
+main {
+  margin-bottom: 0 !important;
+}
+
+footer {
+  margin-top: 0 !important;
+}
+
 /* CSS переменные */
 :root {
   --primary-color: #0d6efd;
