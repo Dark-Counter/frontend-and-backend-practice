@@ -1,72 +1,162 @@
 <!DOCTYPE html>
 <html lang="ru">
- <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Семестровая работа</title>
- <link rel="stylesheet" href="style/styles.css">
- </head>
- <body>
- <!-- Изменение: Заменили div на семантические теги -->
- <div class="page-container">
- <header class="header"> <!-- Было: <div class="header"> -->
- <h1>Хэдер</h1> <!-- Добавили заголовок для семантики -->
- </header>
- <nav class="nav"> <!-- Было: <div class="nav"> -->
- <ul class="nav-list">
- <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
- <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
- <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
- <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
- <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
- </ul>
- </nav>
- <main class="content"> <!-- Было: <div class="content"> -->
- <article class="profile-header"> <!-- Было: <div class="profile-header"> -->
- <h1 class="profile-title">Информация об авторе</h1>
- <img class="profile-photo" src="images/photo.png" alt="Фото автора">
- <h2 class="profile-name">Кузькин Тимофей Игоревич</h2>
- <p class="profile-group">ЭФБО-17-24</p>
- </article>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Семестровая работа</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Переключатель темы -->
+        <div class="theme-switcher">
+            <button class="theme-switcher__button" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span> <span id="theme-text">Темная тема</span>
+            </button>
+        </div>
 
- <section class="about-me"> <!-- Было: <div class="about-me"> -->
- <h2>Обо мне</h2> <!-- Добавили заголовок для семантики -->
- <p>Обо мне: Я родился в Москве, но моя душа принадлежит улицам Лос-Анджелеса! С детства мечтал стать частью команды Доминика Торетто. В четыре года уже крутил руль игрушечной машинки, представляя себя за рулем Dodge Charger. Потом школа, где я изучал не только математику, но и искусство дрифта на велосипеде. Каждый день я повторяю мантру: "Семья - это не только кровь, семья - это те, кто готов умереть за тебя". Моя мечта - однажды услышать от Вин Дизеля: "Ты теперь часть семьи, брат!" 🚗💨</p>
- </section>
+        <!-- Шапка -->
+        <header class="header">
+            <h1 class="header__title">🏎️ Команда "Семья" 🏁</h1>
+        </header>
 
- <section class="skills-container"> <!-- Было: <div class="skills-container"> -->
- <h2>Мои навыки</h2> <!-- Добавили заголовок для семантики -->
- <div class="skills-grid"> <!-- Обертка для Grid -->
- <div class="skill-tag">Python</div>
- <div class="skill-tag">FastAPI</div>
- <div class="skill-tag">SQL</div>
- <div class="skill-tag">HTML</div>
- <div class="skill-tag">CSS</div>
- <div class="skill-tag">JavaScript</div>
- </div>
- </section>
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link nav__link--active" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
 
- <section class="experience-section"> <!-- Было: <div class="experience-section"> -->
- <h2 class="section-title">Мой опыт работы</h2>
- <div class="experience-grid"> <!-- Обертка для Grid -->
- <article class="experience-card"> <!-- Было: <div class="experience-card"> -->
- <h3 class="experience-title">Механик в гараже "Семья"</h3>
- <p class="experience-desc">Работал механиком в подпольном гараже, где собирал и тюнинговал машины для уличных гонок. Специализировался на модификации двигателей и установке систем закиси азота. "Семья" - это не только кровь, но и те, кто доверяет тебе свой автомобиль!</p>
- </article>
- <article class="experience-card">
- <h3 class="experience-title">Инструктор по дрифту</h3>
- <p class="experience-desc">Обучал новичков искусству контролируемого заноса на закрытых трассах. Преподавал основы дрифта: от простых фигур до сложных комбинаций. Каждый ученик становился частью нашей "семьи" дрифтеров. "Дрифт - это не просто вождение, это философия жизни!"</p>
- </article>
- <article class="experience-card">
- <h3 class="experience-title">Организатор уличных гонок</h3>
- <p class="experience-desc">Организовывал подпольные гонки по ночным улицам Москвы. Собирал команды гонщиков, планировал маршруты и обеспечивал безопасность участников. "Семья" гонщиков всегда была готова поддержать друг друга в трудную минуту. "Один за всех, и все за одного!"</p>
- </article>
- </div>
- </section>
- </main>
- <footer class="footer"> <!-- Было: <div class="footer"> -->
- <p>Футер</p> <!-- Добавили параграф для семантики -->
- </footer>
- </div>
- </body>
+        <!-- Основной контент -->
+        <main class="main">
+            <!-- Профиль -->
+            <section class="profile">
+                <div class="profile__card">
+                    <h1 class="profile__title">Информация об авторе</h1>
+                    <img class="profile__photo" src="images/photo.png" alt="Фото автора">
+                    <h2 class="profile__name">Кузькин Тимофей Игоревич</h2>
+                    <p class="profile__group">ЭФБО-17-24</p>
+                </div>
+            </section>
+
+            <!-- Обо мне -->
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about__content">
+                    <p class="about__text">
+                        Я родился в Москве, но моя душа принадлежит улицам Лос-Анджелеса! С детства мечтал стать частью команды Доминика Торетто. В четыре года уже крутил руль игрушечной машинки, представляя себя за рулем Dodge Charger. Потом школа, где я изучал не только математику, но и искусство дрифта на велосипеде. Каждый день я повторяю мантру: "Семья - это не только кровь, семья - это те, кто готов умереть за тебя". Моя мечта - однажды услышать от Вин Дизеля: "Ты теперь часть семьи, брат!" 🚗💨
+                    </p>
+                </div>
+            </section>
+
+            <!-- Навыки -->
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill skill--primary">
+                        <span class="skill__name">Python</span>
+                    </div>
+                    <div class="skill skill--secondary">
+                        <span class="skill__name">FastAPI</span>
+                    </div>
+                    <div class="skill skill--success">
+                        <span class="skill__name">SQL</span>
+                    </div>
+                    <div class="skill skill--warning">
+                        <span class="skill__name">HTML</span>
+                    </div>
+                    <div class="skill skill--info">
+                        <span class="skill__name">CSS</span>
+                    </div>
+                    <div class="skill skill--danger">
+                        <span class="skill__name">JavaScript</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Опыт работы -->
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы</h2>
+                <div class="experience__list">
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Механик в гараже "Семья"</h3>
+                        <p class="experience-card__description">
+                            Работал механиком в подпольном гараже, где собирал и тюнинговал машины для уличных гонок. Специализировался на модификации двигателей и установке систем закиси азота. "Семья" - это не только кровь, но и те, кто доверяет тебе свой автомобиль!
+                        </p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Инструктор по дрифту</h3>
+                        <p class="experience-card__description">
+                            Обучал новичков искусству контролируемого заноса на закрытых трассах. Преподавал основы дрифта: от простых фигур до сложных комбинаций. Каждый ученик становился частью нашей "семьи" дрифтеров. "Дрифт - это не просто вождение, это философия жизни!"
+                        </p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Организатор уличных гонок</h3>
+                        <p class="experience-card__description">
+                            Организовывал подпольные гонки по ночным улицам Москвы. Собирал команды гонщиков, планировал маршруты и обеспечивал безопасность участников. "Семья" гонщиков всегда была готова поддержать друг друга в трудную минуту. "Один за всех, и все за одного!"
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p class="footer__text">© 2024 Команда "Семья". Семья - это не только кровь! 🏎️</p>
+        </footer>
+    </div>
+
+    <script>
+        // Переключение темы
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Обновляем иконку и текст
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (newTheme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Светлая тема';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Темная тема';
+            }
+        }
+
+        // Загружаем сохраненную тему при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (savedTheme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Светлая тема';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Темная тема';
+            }
+        });
+    </script>
+</body>
 </html>

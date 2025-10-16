@@ -7,66 +7,220 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div class="page-container">
-    <header class="header">
-        <h1>Хэдер</h1>
-    </header>
-    
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-    
-    <main class="content">
-        <h1 class="page-title">Каталог товаров</h1>
-        
-        <section class="goods-catalog">
-            <!-- Товар 1 -->
-            <article class="goods-item">
-                <div class="goods-image">
-                    <img src="../images/goods1.jpg" alt="Dodge Charger 1970" width="300" height="350">
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Переключатель темы -->
+        <div class="theme-switcher">
+            <button class="theme-switcher__button" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span> <span id="theme-text">Темная тема</span>
+            </button>
+        </div>
+
+        <!-- Шапка -->
+        <header class="header">
+            <h1 class="header__title">🏎️ Каталог товаров команды "Семья" 🏁</h1>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link nav__link--active" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main">
+            <section class="goods">
+                <h2 class="goods__title">Наш каталог</h2>
+                <div class="goods__grid">
+                    <!-- Товар 1 - Рекомендуемый -->
+                    <article class="goods-card goods-card--featured" data-state="available">
+                        <div class="goods-card__image">
+                            <img src="../images/goods1.jpg" alt="Dodge Charger 1970" width="300" height="350">
+                        </div>
+                        <div class="goods-card__content">
+                            <h3 class="goods-card__title">🏁 Dodge Charger 1970 "Семья"</h3>
+                            <p class="goods-card__description">Легендарная машина Доминика Торетто. Полностью восстановлена, тюнингована для уличных гонок. V8 7.2L, закись азота, спортивная подвеска.</p>
+                            <div class="goods-card__price">2.500.000 ₽</div>
+                            <button class="button button--primary" onclick="addToCart(this)">В корзину</button>
+                        </div>
+                    </article>
+                    
+                    <!-- Товар 2 - Со скидкой -->
+                    <article class="goods-card goods-card--discount" data-state="available">
+                        <div class="goods-card__image">
+                            <img src="../images/goods2.jpg" alt="Система закиси азота" width="300" height="300">
+                        </div>
+                        <div class="goods-card__content">
+                            <h3 class="goods-card__title">💨 Система закиси азота NOS</h3>
+                            <p class="goods-card__description">Профессиональная система закиси азота для увеличения мощности двигателя. 50-200 лошадиных сил дополнительно. Полный комплект с баллонами и контроллерами.</p>
+                            <div class="goods-card__price">
+                                <span style="text-decoration: line-through; color: var(--color-text-muted);">500.000 ₽</span>
+                                <span style="color: var(--color-danger); font-weight: bold;">450.000 ₽</span>
+                            </div>
+                            <button class="button button--primary" onclick="addToCart(this)">В корзину</button>
+                        </div>
+                    </article>
+                    
+                    <!-- Товар 3 - Обычный -->
+                    <article class="goods-card" data-state="available">
+                        <div class="goods-card__image">
+                            <img src="../images/goods3.jpg" alt="Куртка команды Семья" width="300" height="300">
+                        </div>
+                        <div class="goods-card__content">
+                            <h3 class="goods-card__title">👕 Куртка команды "Семья"</h3>
+                            <p class="goods-card__description">Официальная куртка команды "Семья". Кожаная, с вышивкой логотипа команды. Для настоящих гонщиков, которые понимают, что семья - это не только кровь.</p>
+                            <div class="goods-card__price">25.000 ₽</div>
+                            <button class="button button--primary" onclick="addToCart(this)">В корзину</button>
+                        </div>
+                    </article>
+
+                    <!-- Товар 4 - Распродан -->
+                    <article class="goods-card" data-state="sold-out">
+                        <div class="goods-card__image">
+                            <img src="../images/goods1.jpg" alt="Toyota Supra" width="300" height="300">
+                        </div>
+                        <div class="goods-card__content">
+                            <h3 class="goods-card__title">🏎️ Toyota Supra "Брайан"</h3>
+                            <p class="goods-card__description">Легендарная Toyota Supra из фильма "Форсаж". Полностью восстановлена, тюнингована для уличных гонок. 2JZ-GTE двигатель, турбонаддув.</p>
+                            <div class="goods-card__price">1.800.000 ₽</div>
+                            <button class="button button--secondary button--disabled">Распродан</button>
+                        </div>
+                    </article>
+
+                    <!-- Товар 5 - Выбранный -->
+                    <article class="goods-card" data-state="selected">
+                        <div class="goods-card__image">
+                            <img src="../images/goods2.jpg" alt="Спортивные диски" width="300" height="300">
+                        </div>
+                        <div class="goods-card__content">
+                            <h3 class="goods-card__title">⚙️ Спортивные диски "Семья"</h3>
+                            <p class="goods-card__description">Легкосплавные диски для уличных гонок. Специальная конструкция для максимального сцепления с дорогой. Размеры: 18x9.5, 19x10.5.</p>
+                            <div class="goods-card__price">180.000 ₽</div>
+                            <button class="button button--secondary" onclick="removeFromCart(this)">Убрать из корзины</button>
+                        </div>
+                    </article>
+
+                    <!-- Товар 6 - Обычный -->
+                    <article class="goods-card" data-state="available">
+                        <div class="goods-card__image">
+                            <img src="../images/goods3.jpg" alt="Перчатки гонщика" width="300" height="300">
+                        </div>
+                        <div class="goods-card__content">
+                            <h3 class="goods-card__title">🧤 Перчатки гонщика "Семья"</h3>
+                            <p class="goods-card__description">Профессиональные перчатки для уличных гонок. Улучшенное сцепление с рулем, вентиляция, логотип команды "Семья".</p>
+                            <div class="goods-card__price">8.500 ₽</div>
+                            <button class="button button--primary" onclick="addToCart(this)">В корзину</button>
+                        </div>
+                    </article>
                 </div>
-                <div class="goods-info">
-                    <h3 class="goods-title">🏁 Dodge Charger 1970 "Семья"</h3>
-                    <p class="goods-description">Легендарная машина Доминика Торетто. Полностью восстановлена, тюнингована для уличных гонок. V8 7.2L, закись азота, спортивная подвеска.</p>
-                    <div class="goods-price">2.500.000 ₽</div>
-                </div>
-            </article>
-            
-            <!-- Товар 2 -->
-            <article class="goods-item">
-                <div class="goods-image">
-                    <img src="../images/goods2.jpg" alt="Система закиси азота" width="300" height="300">
-                </div>
-                <div class="goods-info">
-                    <h3 class="goods-title">💨 Система закиси азота NOS</h3>
-                    <p class="goods-description">Профессиональная система закиси азота для увеличения мощности двигателя. 50-200 лошадиных сил дополнительно. Полный комплект с баллонами и контроллерами.</p>
-                    <div class="goods-price">450.000 ₽</div>
-                </div>
-            </article>
-            
-            <!-- Товар 3 -->
-            <article class="goods-item">
-                <div class="goods-image">
-                    <img src="../images/goods3.jpg" alt="Куртка команды Семья" width="300" height="300">
-                </div>
-                <div class="goods-info">
-                    <h3 class="goods-title">👕 Куртка команды "Семья"</h3>
-                    <p class="goods-description">Официальная куртка команды "Семья". Кожаная, с вышивкой логотипа команды. Для настоящих гонщиков, которые понимают, что семья - это не только кровь.</p>
-                    <div class="goods-price">25.000 ₽</div>
-                </div>
-            </article>
-        </section>
-    </main>
-    
-    <footer class="footer">
-        <p>Футер</p>
-    </footer>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p class="footer__text">© 2024 Команда "Семья". Семья - это не только кровь! 🏎️</p>
+        </footer>
     </div>
+
+    <script>
+        // Переключение темы
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Обновляем иконку и текст
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (newTheme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Светлая тема';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Темная тема';
+            }
+        }
+
+        // Функции для работы с корзиной
+        function addToCart(button) {
+            const card = button.closest('.goods-card');
+            card.setAttribute('data-state', 'selected');
+            button.textContent = 'Убрать из корзины';
+            button.className = 'button button--secondary';
+            button.onclick = function() { removeFromCart(this); };
+            
+            // Показываем уведомление
+            showNotification('Товар добавлен в корзину! 🛒');
+        }
+
+        function removeFromCart(button) {
+            const card = button.closest('.goods-card');
+            card.setAttribute('data-state', 'available');
+            button.textContent = 'В корзину';
+            button.className = 'button button--primary';
+            button.onclick = function() { addToCart(this); };
+            
+            // Показываем уведомление
+            showNotification('Товар удален из корзины! ❌');
+        }
+
+        function showNotification(message) {
+            // Создаем уведомление
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--color-primary);
+                color: var(--color-text-white);
+                padding: var(--spacing-md) var(--spacing-lg);
+                border-radius: var(--radius-md);
+                box-shadow: var(--shadow-lg);
+                z-index: var(--z-tooltip);
+                animation: slideIn 0.3s ease;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Удаляем уведомление через 3 секунды
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Загружаем сохраненную тему при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (savedTheme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Светлая тема';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Темная тема';
+            }
+        });
+    </script>
 </body>
 </html>

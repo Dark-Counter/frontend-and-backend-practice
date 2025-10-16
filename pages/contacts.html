@@ -7,79 +7,109 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div class="page-container">
-    <header class="header">
-        <h1>Хэдер</h1>
-    </header>
-    
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-            <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-            <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-            <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-    
-    <main class="content">
-        <h1 class="page-title">Контакты</h1>
-        
-        <section class="contacts-info">
-            <article class="contact-item">
-                <h3 class="contact-label">📧 Email команды "Семья":</h3>
-                <p class="contact-value">family.garage@moscow.ru</p>
-            </article>
-            
-            <article class="contact-item">
-                <h3 class="contact-label">🏁 Адрес гаража "Семья":</h3>
-                <address class="contact-value">г. Москва, ул. Гоночная, д. 1970, гараж "Семья"</address>
-            </article>
-            
-            <article class="contact-item">
-                <h3 class="contact-label">📱 Телефон для экстренных гонок:</h3>
-                <p class="contact-value">+7 (495) FAMILY-1</p>
-            </article>
-            
-            <article class="contact-item">
-                <h3 class="contact-label">🕐 Время работы гаража:</h3>
-                <p class="contact-value">Круглосуточно (семья не спит!)</p>
-            </article>
-            
-            <article class="contact-item">
-                <button onclick="contactModal.showModal()" class="contact-button">🏎️ Присоединиться к семье!</button>
-            </article>
-        </section>
-    </main>
-    
-    <footer class="footer">
-        <p>Футер</p>
-    </footer>
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Переключатель темы -->
+        <div class="theme-switcher">
+            <button class="theme-switcher__button" onclick="toggleTheme()">
+                <span id="theme-icon">🌙</span> <span id="theme-text">Темная тема</span>
+            </button>
+        </div>
+
+        <!-- Шапка -->
+        <header class="header">
+            <h1 class="header__title">🏎️ Контакты команды "Семья" 🏁</h1>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link nav__link--active" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main">
+            <section class="contacts">
+                <h2 class="contacts__title">Наши контакты</h2>
+                <div class="contacts__list">
+                    <article class="contact-item">
+                        <h3 class="contact-item__label">📧 Email команды "Семья"</h3>
+                        <p class="contact-item__value">family.garage@moscow.ru</p>
+                    </article>
+                    
+                    <article class="contact-item">
+                        <h3 class="contact-item__label">🏁 Адрес гаража "Семья"</h3>
+                        <address class="contact-item__value">г. Москва, ул. Гоночная, д. 1970, гараж "Семья"</address>
+                    </article>
+                    
+                    <article class="contact-item">
+                        <h3 class="contact-item__label">📱 Телефон для экстренных гонок</h3>
+                        <p class="contact-item__value">+7 (495) FAMILY-1</p>
+                    </article>
+                    
+                    <article class="contact-item">
+                        <h3 class="contact-item__label">🕐 Время работы гаража</h3>
+                        <p class="contact-item__value">Круглосуточно (семья не спит!)</p>
+                    </article>
+                    
+                    <article class="contact-item">
+                        <button onclick="contactModal.showModal()" class="button button--primary button--large">
+                            🏎️ Присоединиться к семье!
+                        </button>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p class="footer__text">© 2024 Команда "Семья". Семья - это не только кровь! 🏎️</p>
+        </footer>
     </div>
     
     <!-- Модальное окно для формы обратной связи -->
-    <dialog id="contactModal">
-        <div class="modal-header">
-            <h2>🏎️ Форма вступления в семью</h2>
+    <dialog id="contactModal" class="modal">
+        <div class="modal__header">
+            <h2 class="modal__title">🏎️ Форма вступления в семью</h2>
         </div>
 
-        <div class="modal-content">
+        <div class="modal__content">
             <form id="feedbackForm" method="dialog">
                 <div class="form-group">
-                    <label for="name">Имя <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    <label class="form-group__label" for="name">
+                        Имя <span class="form-group__required">*</span>
+                    </label>
+                    <input class="form-group__input" type="text" id="name" name="name" required placeholder="Введите ваше имя">
                 </div>
                 <div class="form-group">
-                    <label for="phone">Телефон <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                    <label class="form-group__label" for="phone">
+                        Телефон <span class="form-group__required">*</span>
+                    </label>
+                    <input class="form-group__input" type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
                 </div>
                 <div class="form-group">
-                    <label for="email">Электронная почта <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                    <label class="form-group__label" for="email">
+                        Электронная почта <span class="form-group__required">*</span>
+                    </label>
+                    <input class="form-group__input" type="email" id="email" name="email" required placeholder="example@mail.ru">
                 </div>
                 <div class="form-group">
-                    <label for="category">Категория обращения <span class="required">*</span></label>
-                    <select id="category" name="category" required>
+                    <label class="form-group__label" for="category">
+                        Категория обращения <span class="form-group__required">*</span>
+                    </label>
+                    <select class="form-group__select" id="category" name="category" required>
                         <option value="">Выберите категорию</option>
                         <option value="racing">Участие в гонках</option>
                         <option value="mechanic">Работа механиком</option>
@@ -90,20 +120,44 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Текст обращения <span class="required">*</span></label>
-                    <textarea id="message" name="message" required placeholder="Расскажите о себе и почему хотите присоединиться к семье..."></textarea>
+                    <label class="form-group__label" for="message">
+                        Текст обращения <span class="form-group__required">*</span>
+                    </label>
+                    <textarea class="form-group__textarea" id="message" name="message" required placeholder="Расскажите о себе и почему хотите присоединиться к семье..."></textarea>
                 </div>
-                <div class="modal-actions">
+                <div class="modal__actions">
                     <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
-                    <button type="submit" class="btn btn-secondary">Отмена</button>
+                    <button type="submit" class="button button--secondary">Отмена</button>
                     <!-- Кнопка отправки с обработкой через JavaScript -->
-                    <button type="button" class="btn btn-primary" onclick="submitForm()">🏁 Присоединиться!</button>
+                    <button type="button" class="button button--primary" onclick="submitForm()">🏁 Присоединиться!</button>
                 </div>
             </form>
         </div>
     </dialog>
     
     <script>
+        // Переключение темы
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Обновляем иконку и текст
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (newTheme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Светлая тема';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Темная тема';
+            }
+        }
+
         // Функция для отправки формы
         function submitForm() {
             const form = document.getElementById('feedbackForm');
@@ -148,6 +202,23 @@
         document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
             if (event.key === 'Enter' && event.target.type !== 'textarea') {
                 event.preventDefault();
+            }
+        });
+
+        // Загружаем сохраненную тему при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            if (savedTheme === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Светлая тема';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Темная тема';
             }
         });
     </script>
