@@ -3,44 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Команда "Семья"</title>
+    <title>Портфолио - Кузькин Тимофей</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-        .bg-gradient-family {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .bg-gradient-dark-family {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        }
-        .skill-badge {
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-        }
-        .experience-card {
-            transition: transform 0.3s ease;
-        }
-        .experience-card:hover {
-            transform: translateY(-5px);
-        }
-        .profile-photo {
-            border: 4px solid #667eea;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body class="bg-light">
+<body>
     <div class="container-fluid p-0">
         <!-- Header -->
-        <header class="bg-gradient-dark-family text-white py-4">
+        <header class="bg-primary text-white py-4">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h1 class="h3 mb-1">🏎️ Команда "Семья" 🏁</h1>
-                        <p class="mb-0 opacity-75">Семья - это не только кровь!</p>
+                        <h1 class="h3 mb-1">
+                            <i class="bi bi-code-slash me-2"></i>
+                            Кузькин Тимофей Игоревич
+                        </h1>
+                        <p class="mb-0 opacity-75">Студент-разработчик</p>
                     </div>
                     <div class="col-auto">
-                        <span class="badge bg-primary">ЭФБО-17-24</span>
+                        <span class="badge bg-light text-primary">ЭФБО-17-24</span>
                     </div>
                 </div>
             </div>
@@ -60,13 +42,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/news.html">
-                                <i class="bi bi-newspaper me-1"></i>Новости
+                            <a class="nav-link" href="pages/projects.html">
+                                <i class="bi bi-folder me-1"></i>Проекты
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/goods.html">
-                                <i class="bi bi-cart me-1"></i>Товары
+                            <a class="nav-link" href="pages/diary.html">
+                                <i class="bi bi-journal-text me-1"></i>Дневник
                             </a>
                         </li>
                         <li class="nav-item">
@@ -87,47 +69,19 @@
                     <div class="card-body p-4">
                         <div class="row align-items-center">
                             <div class="col-md-3 text-center mb-3 mb-md-0">
-                                <img src="images/photo.png" alt="Фото автора" class="img-fluid rounded-circle profile-photo" style="width: 220px; height: 280px; object-fit: cover;">
+                                <img src="images/photo.png" alt="Фото студента" class="img-fluid rounded-circle profile-photo" style="width: 200px; height: 200px; object-fit: cover;">
                             </div>
                             <div class="col-md-9">
-                                <h2 class="card-title h4 text-primary">Кузькин Тимофей Игоревич</h2>
-                                <p class="card-text text-muted mb-2">
-                                    <i class="bi bi-bookmark-check-fill text-primary"></i>
-                                    Студент группы ЭФБО-17-24
+                                <h2 class="card-title h4 text-primary">Привет! Я студент группы ЭФБО-17-24</h2>
+                                <p class="card-text text-muted mb-3">
+                                    Увлекаюсь веб-разработкой и изучаю современные технологии. 
+                                    Специализируюсь на создании качественных пользовательских интерфейсов.
                                 </p>
-                                <p class="card-text">
-                                    Факультет информационных технологий, специальность "Веб-разработка"
-                                </p>
-                                <div class="d-flex gap-2 flex-wrap">
-                                    <span class="badge bg-primary skill-badge">Python</span>
-                                    <span class="badge bg-success skill-badge">FastAPI</span>
-                                    <span class="badge bg-info skill-badge">SQL</span>
-                                    <span class="badge bg-warning skill-badge">HTML</span>
-                                    <span class="badge bg-danger skill-badge">CSS</span>
-                                    <span class="badge bg-secondary skill-badge">JavaScript</span>
-                                </div>
+                                <a href="assets/resume.pdf" class="btn btn-primary" download>
+                                    <i class="bi bi-download me-1"></i>Скачать резюме
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section class="mb-5">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-light">
-                        <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-person-circle text-primary"></i>
-                            Обо мне
-                        </h3>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">
-                            Я родился в Москве, но моя душа принадлежит улицам Лос-Анджелеса! С детства мечтал стать частью команды Доминика Торетто. В четыре года уже крутил руль игрушечной машинки, представляя себя за рулем Dodge Charger.
-                        </p>
-                        <p class="card-text">
-                            Потом школа, где я изучал не только математику, но и искусство дрифта на велосипеде. Каждый день я повторяю мантру: "Семья - это не только кровь, семья - это те, кто готов умереть за тебя". Моя мечта - однажды услышать от Вин Дизеля: "Ты теперь часть семьи, брат!" 🚗💨
-                        </p>
                     </div>
                 </div>
             </section>
@@ -146,28 +100,28 @@
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1">
-                                        <span>Python</span>
-                                        <span class="text-primary">95%</span>
+                                        <span>HTML/CSS</span>
+                                        <span class="text-primary">90%</span>
                                     </div>
                                     <div class="progress" style="height: 8px;">
-                                        <div class="progress-bar bg-primary" style="width: 95%"></div>
+                                        <div class="progress-bar bg-primary" style="width: 90%"></div>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1">
-                                        <span>FastAPI</span>
-                                        <span class="text-success">90%</span>
+                                        <span>JavaScript</span>
+                                        <span class="text-primary">80%</span>
                                     </div>
                                     <div class="progress" style="height: 8px;">
-                                        <div class="progress-bar bg-success" style="width: 90%"></div>
+                                        <div class="progress-bar bg-success" style="width: 80%"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1">
-                                        <span>SQL</span>
-                                        <span class="text-info">85%</span>
+                                        <span>Bootstrap</span>
+                                        <span class="text-primary">85%</span>
                                     </div>
                                     <div class="progress" style="height: 8px;">
                                         <div class="progress-bar bg-info" style="width: 85%"></div>
@@ -175,11 +129,11 @@
                                 </div>
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1">
-                                        <span>HTML/CSS</span>
-                                        <span class="text-warning">80%</span>
+                                        <span>React</span>
+                                        <span class="text-primary">60%</span>
                                     </div>
                                     <div class="progress" style="height: 8px;">
-                                        <div class="progress-bar bg-warning" style="width: 80%"></div>
+                                        <div class="progress-bar bg-warning" style="width: 60%"></div>
                                     </div>
                                 </div>
                             </div>
@@ -188,56 +142,69 @@
                 </div>
             </section>
 
-            <!-- Experience Section -->
+            <!-- Best Projects Section -->
             <section class="mb-5">
                 <div class="card shadow-sm">
                     <div class="card-header bg-light">
                         <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-briefcase text-primary"></i>
-                            Мой опыт работы
+                            <i class="bi bi-star text-primary"></i>
+                            Лучшие проекты
                         </h3>
                     </div>
                     <div class="card-body">
                         <div class="row g-3">
                             <div class="col-md-4">
-                                <div class="card h-100 experience-card">
+                                <div class="card h-100 project-card">
+                                    <img src="images/project1.jpg" class="card-img-top" alt="Личный сайт" style="height: 150px; object-fit: cover;">
                                     <div class="card-body">
-                                        <h5 class="card-title text-primary">Механик в гараже "Семья"</h5>
+                                        <h5 class="card-title">Личный сайт</h5>
                                         <p class="card-text small text-muted">
-                                            Работал механиком в подпольном гараже, где собирал и тюнинговал машины для уличных гонок. Специализировался на модификации двигателей и установке систем закиси азота.
+                                            Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.
                                         </p>
                                         <div class="mb-2">
-                                            <span class="badge bg-primary">Механика</span>
-                                            <span class="badge bg-success">Тюнинг</span>
+                                            <span class="badge bg-primary">HTML</span>
+                                            <span class="badge bg-primary">CSS</span>
+                                            <span class="badge bg-primary">Bootstrap</span>
                                         </div>
+                                        <button class="btn btn-outline-primary btn-sm" onclick="openProjectModal('project1')">
+                                            Подробнее
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card h-100 experience-card">
+                                <div class="card h-100 project-card">
+                                    <img src="images/project2.jpg" class="card-img-top" alt="Todo приложение" style="height: 150px; object-fit: cover;">
                                     <div class="card-body">
-                                        <h5 class="card-title text-primary">Инструктор по дрифту</h5>
+                                        <h5 class="card-title">Todo приложение</h5>
                                         <p class="card-text small text-muted">
-                                            Обучал новичков искусству контролируемого заноса на закрытых трассах. Преподавал основы дрифта: от простых фигур до сложных комбинаций.
+                                            Приложение для управления задачами с использованием JavaScript.
                                         </p>
                                         <div class="mb-2">
-                                            <span class="badge bg-info">Обучение</span>
-                                            <span class="badge bg-warning">Дрифт</span>
+                                            <span class="badge bg-success">JavaScript</span>
+                                            <span class="badge bg-success">LocalStorage</span>
                                         </div>
+                                        <button class="btn btn-outline-primary btn-sm" onclick="openProjectModal('project2')">
+                                            Подробнее
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="card h-100 experience-card">
+                                <div class="card h-100 project-card">
+                                    <img src="images/project3.jpg" class="card-img-top" alt="Интернет-магазин" style="height: 150px; object-fit: cover;">
                                     <div class="card-body">
-                                        <h5 class="card-title text-primary">Организатор уличных гонок</h5>
+                                        <h5 class="card-title">Интернет-магазин</h5>
                                         <p class="card-text small text-muted">
-                                            Организовывал подпольные гонки по ночным улицам Москвы. Собирал команды гонщиков, планировал маршруты и обеспечивал безопасность участников.
+                                            Прототип интернет-магазина с корзиной товаров и фильтрацией.
                                         </p>
                                         <div class="mb-2">
-                                            <span class="badge bg-danger">Организация</span>
-                                            <span class="badge bg-secondary">Гонки</span>
+                                            <span class="badge bg-info">React</span>
+                                            <span class="badge bg-info">API</span>
                                         </div>
+                                        <button class="btn btn-outline-primary btn-sm" onclick="openProjectModal('project3')">
+                                            Подробнее
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -252,17 +219,46 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="mb-0">&copy; 2024 Команда "Семья". Семья - это не только кровь! 🏎️</p>
+                        <p class="mb-0">&copy; 2025 Кузькин Тимофей. Все права защищены.</p>
                     </div>
                     <div class="col-md-6 text-md-end">
                         <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
-                        <a href="pages/goods.html" class="text-white text-decoration-none">Товары</a>
+                        <a href="pages/projects.html" class="text-white text-decoration-none">Проекты</a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
 
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalTitle">Название проекта</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="projectModalImage" src="" alt="" class="img-fluid mb-3">
+                    <p id="projectModalDescription">Описание проекта</p>
+                    <div class="mb-3">
+                        <strong>Технологии:</strong>
+                        <div id="projectModalTechnologies"></div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a id="projectModalLive" href="#" class="btn btn-primary" target="_blank">
+                            <i class="bi bi-eye me-1"></i>Живая версия
+                        </a>
+                        <a id="projectModalCode" href="#" class="btn btn-outline-primary" target="_blank">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
