@@ -124,11 +124,21 @@ body {
 
 /* ===== НАВЫКИ ===== */
 .skills-container {
+    margin: 30px 0; /* Вертикальные отступы */
+}
+
+.skills-container h2 {
+    font-size: 24px; /* Размер шрифта заголовка */
+    color: #2c3e50; /* Темно-синий цвет текста */
+    margin: 0 0 20px 0; /* Отступ снизу */
+    font-weight: 600; /* Жирный шрифт */
+}
+
+.skills-grid {
     display: flex; /* Горизонтальное расположение навыков */
     justify-content: center; /* Выравнивание по центру */
     flex-wrap: wrap; /* Перенос на новую строку при необходимости */
     gap: 15px; /* Расстояние между навыками */
-    margin: 30px 0; /* Вертикальные отступы */
 }
 
 .skill-tag {
@@ -152,18 +162,23 @@ body {
     margin-top: 50px; /* Отступ сверху */
 }
 
-.section-title {
-    font-size: 28px; /* Размер шрифта заголовка секции */
+.experience-section h2 {
+    font-size: 24px; /* Размер шрифта заголовка секции */
     color: #2c3e50; /* Темно-синий цвет текста */
-    text-align: center; /* Выравнивание по центру */
-    margin-bottom: 30px; /* Отступ снизу */
-    font-weight: 300; /* Легкое начертание шрифта */
+    margin: 0 0 20px 0; /* Отступ снизу */
+    font-weight: 600; /* Жирный шрифт */
+}
+
+.experience-grid {
+    display: flex; /* Горизонтальное расположение карточек опыта */
+    flex-direction: column; /* Вертикальное расположение */
+    gap: 20px; /* Расстояние между карточками */
 }
 
 .experience-card {
     background: white; /* Белый фон карточки */
     padding: 25px; /* Внутренние отступы */
-    margin: 20px 0; /* Вертикальные отступы */
+    margin: 0; /* Убираем отступы, так как используем gap в grid */
     border-radius: 12px; /* Скругленные углы */
     box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Легкая тень */
     border-left: 4px solid #667eea; /* Синяя полоса слева */
