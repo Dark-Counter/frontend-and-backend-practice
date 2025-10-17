@@ -3,101 +3,13 @@
 // Данные проектов
 const projectsData = {
     project1: {
-        title: 'Личный сайт',
-        description: 'Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном. Включает в себя все необходимые разделы для представления навыков и проектов. Создан с использованием современных веб-технологий и лучших практик разработки.',
-        image: 'https://via.placeholder.com/400x200/007bff/ffffff?text=Личный+сайт',
+        title: 'Сайт для РТУ МИРЭА',
+        description: 'Официальный сайт РТУ МИРЭА. Разработан с использованием современных веб-технологий и адаптивного дизайна для удобного просмотра на всех устройствах.',
+        image: '../images/projects/project1.png',
         technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'],
-        liveUrl: 'https://example.com/project1',
-        codeUrl: 'https://github.com/kuzkin-timofey/project1'
+        liveUrl: 'https://online-edu.mirea.ru/my/',
+        codeUrl: 'https://online-edu.mirea.ru/my/courses.php'
     },
-    project2: {
-        title: 'Todo приложение',
-        description: 'Приложение для управления задачами с использованием JavaScript. Включает добавление, редактирование, удаление и фильтрацию задач. Использует LocalStorage для сохранения данных между сессиями.',
-        image: 'https://via.placeholder.com/400x200/28a745/ffffff?text=Todo+приложение',
-        technologies: ['JavaScript', 'LocalStorage', 'DOM', 'CSS'],
-        liveUrl: 'https://example.com/project2',
-        codeUrl: 'https://github.com/kuzkin-timofey/project2'
-    },
-    project3: {
-        title: 'Интернет-магазин',
-        description: 'Прототип интернет-магазина с корзиной товаров и фильтрацией. Создан с использованием React и современных веб-технологий. Включает управление состоянием, маршрутизацию и интеграцию с API.',
-        image: 'https://via.placeholder.com/400x200/17a2b8/ffffff?text=Интернет-магазин',
-        technologies: ['React', 'API', 'Redux', 'Node.js'],
-        liveUrl: 'https://example.com/project3',
-        codeUrl: 'https://github.com/kuzkin-timofey/project3'
-    },
-    project4: {
-        title: 'Лендинг страница',
-        description: 'Адаптивная лендинг страница для IT-компании. Включает современный дизайн и интерактивные элементы. Оптимизирована для поисковых систем и быстрой загрузки.',
-        image: 'https://via.placeholder.com/400x200/ffc107/000000?text=Лендинг+страница',
-        technologies: ['HTML', 'CSS', 'JavaScript', 'SEO'],
-        liveUrl: 'https://example.com/project4',
-        codeUrl: 'https://github.com/kuzkin-timofey/project4'
-    },
-    project5: {
-        title: 'Игра "Змейка"',
-        description: 'Классическая игра "Змейка" на чистом JavaScript. Включает систему очков, уровни сложности и сохранение рекордов. Использует Canvas API для отрисовки графики.',
-        image: 'https://via.placeholder.com/400x200/6f42c1/ffffff?text=Игра+Змейка',
-        technologies: ['JavaScript', 'Canvas', 'Game', 'HTML5'],
-        liveUrl: 'https://example.com/project5',
-        codeUrl: 'https://github.com/kuzkin-timofey/project5'
-    },
-    project6: {
-        title: 'Чат приложение',
-        description: 'Веб-чат с возможностью обмена сообщениями в реальном времени. Использует WebSocket для мгновенной доставки сообщений. Включает аутентификацию и комнаты для общения.',
-        image: 'https://via.placeholder.com/400x200/dc3545/ffffff?text=Чат+приложение',
-        technologies: ['React', 'WebSocket', 'Node.js', 'MongoDB'],
-        liveUrl: 'https://example.com/project6',
-        codeUrl: 'https://github.com/kuzkin-timofey/project6'
-    },
-    project7: {
-        title: 'Блог платформа',
-        description: 'Современная платформа для ведения блога с системой комментариев, тегами и поиском. Адаптивный дизайн и SEO оптимизация. Включает админ панель для управления контентом.',
-        image: 'https://via.placeholder.com/400x200/20c997/ffffff?text=Блог+платформа',
-        technologies: ['HTML', 'CSS', 'PHP', 'MySQL'],
-        liveUrl: 'https://example.com/project7',
-        codeUrl: 'https://github.com/kuzkin-timofey/project7'
-    },
-    project8: {
-        title: 'Научный калькулятор',
-        description: 'Продвинутый калькулятор с поддержкой тригонометрических функций, логарифмов и констант. Темная и светлая темы, история вычислений и экспорт результатов.',
-        image: 'https://via.placeholder.com/400x200/fd7e14/ffffff?text=Калькулятор',
-        technologies: ['JavaScript', 'Math.js', 'CSS Grid', 'LocalStorage'],
-        liveUrl: 'https://example.com/project8',
-        codeUrl: 'https://github.com/kuzkin-timofey/project8'
-    },
-    project9: {
-        title: 'Погодное приложение',
-        description: 'Приложение для отслеживания погоды с прогнозами на неделю. Геолокация, анимации и красивые иконки погоды. Поддержка множества городов и уведомлений.',
-        image: 'https://via.placeholder.com/400x200/6c757d/ffffff?text=Погодное+приложение',
-        technologies: ['React', 'API', 'Geolocation', 'Chart.js'],
-        liveUrl: 'https://example.com/project9',
-        codeUrl: 'https://github.com/kuzkin-timofey/project9'
-    },
-    project10: {
-        title: 'Портфолио сайт',
-        description: 'Креативный портфолио с анимациями и интерактивными элементами. Параллакс эффекты и плавные переходы между секциями. Оптимизирован для производительности.',
-        image: 'https://via.placeholder.com/400x200/6610f2/ffffff?text=Портфолио+сайт',
-        technologies: ['HTML', 'CSS', 'GSAP', 'Three.js'],
-        liveUrl: 'https://example.com/project10',
-        codeUrl: 'https://github.com/kuzkin-timofey/project10'
-    },
-    project11: {
-        title: 'Игра "Память"',
-        description: 'Классическая игра на запоминание карточек с таймером и счетчиком ходов. Различные уровни сложности и красивые анимации. Сохранение рекордов.',
-        image: 'https://via.placeholder.com/400x200/e83e8c/ffffff?text=Игра+Память',
-        technologies: ['JavaScript', 'CSS Animations', 'LocalStorage', 'Canvas'],
-        liveUrl: 'https://example.com/project11',
-        codeUrl: 'https://github.com/kuzkin-timofey/project11'
-    },
-    project12: {
-        title: 'Админ панель',
-        description: 'Полнофункциональная админ панель с дашбордом, таблицами данных, графиками и системой управления пользователями. Темная тема и адаптивный дизайн.',
-        image: 'https://via.placeholder.com/400x200/198754/ffffff?text=Админ+панель',
-        technologies: ['React', 'Redux', 'Chart.js', 'Material-UI'],
-        liveUrl: 'https://example.com/project12',
-        codeUrl: 'https://github.com/kuzkin-timofey/project12'
-    }
 };
 
 // ===== ФУНКЦИИ МОДАЛЬНЫХ ОКОН =====
